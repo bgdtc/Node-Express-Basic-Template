@@ -2,8 +2,7 @@
 require('dotenv').config()
 
 //IMPORT DES MODULES
-const
-    express = require('express'),
+const express = require('express'),
     app = express(),
     cors = require('cors'),
     expressSession = require('express-session'),
@@ -13,14 +12,9 @@ const
 
 app.use('/', ROUTER)
 app.get('*', function (req, res) { res.status(404).send({ error: "error" }) })
-app.use(cors({
-    origin: ['http://localhost:4000'], methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true
-}))
+app.use(cors({ origin: ['http://localhost:4000'], methods: ['GET', 'POST', 'PUT', 'DELETE'], credentials: true }))
 app.use('/assets', express.static('public'));
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.listen(port, () => { console.log("le serveur tourne bien sur le port:" + port) });
 
 

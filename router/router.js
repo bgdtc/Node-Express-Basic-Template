@@ -3,12 +3,17 @@
 const express = require('express'),
     router = express.Router();
 //CONTROLLEURS ----------------------------------------------------
-const SampleController = require('./controllers/SampleController')
-// MIDDLEWARES
-const SampleMiddleware = require('./middlewares/SampleMiddleware')
 
-router.route('/sample')
-    .get(SampleMiddleware, SampleController.samplefunction)
+const SpotifyController = require('./controllers/SpotifyController')
+// MIDDLEWARES
+
+const SpotifyMiddleware = require('./middlewares/SpotifyLoginMiddleware')
+
+router.route('/login')
+    .get(SpotifyController.login)
+
+router.route('/callback')
+    .get(SpotifyController.callback)
 
 module.exports = router
 
