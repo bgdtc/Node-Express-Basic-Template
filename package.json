@@ -1,0 +1,16 @@
+{
+  "name": "Node-Express-Basic-Template",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "https://github.com/bgdtc/Node-Express-Basic-Template.git",
+  "author": "bgdtc <theo.bogdan@hotmail.com>",
+  "license": "MIT",
+  "description": "basic express nodejs server template",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3"
+  }
+}
