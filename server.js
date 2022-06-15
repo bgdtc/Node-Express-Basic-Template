@@ -11,7 +11,7 @@ const express = require('express'),
     ROUTER = require('./router/router');
 
 app.use('/', ROUTER)
-app.get('*', function (req, res) { res.status(404).send({ error: "error" }) })
+// app.get('*', function (req, res) { res.status(404).send({ error: "error" }) })
 app.use(cors({ origin: ['http://localhost:4000'], methods: ['GET', 'POST', 'PUT', 'DELETE'], credentials: true }))
 app.use('/assets', express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
