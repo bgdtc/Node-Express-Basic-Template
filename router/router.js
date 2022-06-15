@@ -12,5 +12,8 @@ const SpotifyMiddleware = require('./middlewares/SpotifyTokenMiddleware')
 router.route('/test')
     .get(SpotifyMiddleware, SpotifyController.test)
 
+
+router.route('/callback')
+    .get(SpotifyController.callback)
 module.exports = router
 
