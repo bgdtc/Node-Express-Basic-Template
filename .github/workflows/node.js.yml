@@ -27,9 +27,9 @@ jobs:
         cache: 'npm'
     - name: Install dependencies
       run: 
-       if [ -e yarn.lock ]; then
+       if [ -e yarn.lock ]
        yarn install --frozen-lockfile
-       elif [ -e package-lock.json ]; then
+       elif [ -e package-lock.json ]
        npm ci
        else
        npm i
