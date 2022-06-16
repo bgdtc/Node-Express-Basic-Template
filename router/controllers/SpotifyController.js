@@ -17,5 +17,8 @@ module.exports = {
     },
     callback: async (req, res) => {
         console.log('[CALLBACK HIT]')
+    },
+    login: async (req, res) => {
+
     }
 }
